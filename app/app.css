@@ -1,15 +1,39 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Regular.eot");
+  src:
+    url("/assets/fonts/JetBrainsMono-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+    url("/assets/fonts/JetBrainsMono-Regular.woff") format("woff"),
+    url("/assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@font-face {
+  font-family: "JetBrainsMonoBold";
+  src: url("/assets/fonts/JetBrainsMono-Bold.eot");
+  src:
+    url("/assets/fonts/JetBrainsMono-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"),
+    url("/assets/fonts/JetBrainsMono-Bold.woff") format("woff"),
+    url("/assets/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+@font-face {
+  font-family: "JetBrainsMonoExtraBold";
+  src: url("/assets/fonts/JetBrainsMono-ExtraBold.eot");
+  src:
+    url("/assets/fonts/JetBrainsMono-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2"),
+    url("/assets/fonts/JetBrainsMono-ExtraBold.woff") format("woff"),
+    url("/assets/fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+}
+
+body {
+  font-family: "JetBrainsMono", sans-serif;
+  font-size: 16px;
 }

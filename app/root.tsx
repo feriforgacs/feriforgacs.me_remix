@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
@@ -10,30 +11,34 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-];
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <title>
+        Ferenc Forgacs | Feri Forgacs - Full-Stack Engineer | Indie Maker
+      </title>
+      <meta
+        name="description"
+        content="I’m a software engineer, indie developer, and lecturer with 15+ years of experience building digital products, leading development teams, and mentoring the next generation of web professionals."
+      />
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="bg-slate-950 text-slate-200">
+        <header className="bg-slate-900">
+          <nav className="max-w-xl mx-auto flex items-center gap-10 py-5 mb-5">
+            <Link to={"/"} className="hover:text-blue-400">
+              Home
+            </Link>
+            <Link to={"/projects"} className="hover:text-blue-400">
+              Projects
+            </Link>
+          </nav>
+        </header>
+        <main className="max-w-xl mx-auto">{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>
