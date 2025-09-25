@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import type { Post } from "~/types";
 
-export function getPosts(directory: string): Post[] {
+export function getPosts(directory: string, slugPrefix = ""): Post[] {
   const postFiles = fs
     .readdirSync(directory, {
       withFileTypes: true,
@@ -22,7 +22,7 @@ export function getPosts(directory: string): Post[] {
         .substring(11, filename.length)
         .replace(".md", "");
 
-      const slug = `/${dateSlug}/${postSlug}`;
+      const slug = `/${slugPrefix ? slugPrefix + "/" : ""}${dateSlug}/${postSlug}`;
 
       // get frontmatter
       const postWithMeta = fs.readFileSync(
