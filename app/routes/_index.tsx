@@ -27,7 +27,7 @@ export default function Home() {
           companies.
         </p>
 
-        <p className="text-xl mt-10">Over the years, I’ve:</p>
+        <p className="text-xl mt-10 font-semibold">Over the years, I’ve:</p>
 
         <ul className="list-disc list-inside space-y-10 ml-5">
           <li>
@@ -68,6 +68,37 @@ export default function Home() {
           Solving complex problems through code, validating ideas in the market,
           or helping others grow their skills.
         </p>
+
+        <h4 className="text-lg font-semibold">You can reach me at</h4>
+        <ul>
+          <li>
+            <a
+              href="mailto:hello@feriforgacs.me"
+              target="_blank"
+              rel="noreferrer"
+            >
+              💌 hello@feriforgacs.me
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://bsky.app/profile/feriforgacs.me"
+              target="_blank"
+              rel="noreferrer"
+            >
+              🦋 @feriforgacs.me
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/feriforgacs/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              👨‍💻 linkedin.com/in/feriforgacs/
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );
