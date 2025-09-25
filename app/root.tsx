@@ -30,11 +30,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-slate-950 text-slate-200">
         <header className="bg-slate-900">
           <nav className="max-w-xl mx-auto flex items-center gap-10 py-5 mb-5">
-            <Link to={"/"} className="hover:text-blue-400">
+            <Link to={"/"} className="hover:text-blue-400 text-slate-400">
               Home
             </Link>
             <Link to={"/projects"} className="hover:text-blue-400">
               Projects
+            </Link>
+            <Link to={"/blog"} className="hover:text-blue-400">
+              Blog
             </Link>
           </nav>
         </header>

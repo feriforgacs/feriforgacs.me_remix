@@ -6,7 +6,7 @@ export default function Projects() {
     <>
       <h1 className="text-3xl mt-10 mb-5">Projects</h1>
       <h2 className="text-xl mb-10">
-        Projects I’m working on or shipped already
+        Projects I've worked on in the past couple of years
       </h2>
 
       <ProjectCard
@@ -93,7 +93,7 @@ export default function Projects() {
         projectName="TWiS 2.0"
         projectURL=""
         projectImage="twis2/twis-logo.png"
-        projectDateOfLaunch="never"
+        projectDateOfLaunch="2022. 01."
         projectStatus="☠️ Shut down"
       >
         <p>Grow your database with story-like experiences</p>
@@ -463,6 +463,7 @@ export default function Projects() {
         projectImage="hashtagcalendar/hashtagcalendar-icon.gif"
         projectDateOfLaunch="2019.01."
         projectStatus="☠️ Shutdown"
+        projectURL="https://hashtagcalendar.netlify.app/"
       >
         <p>
           The main purpose of HashtagCalendar is to provide some inspiration for
@@ -480,6 +481,19 @@ export default function Projects() {
           <li>CSS</li>
           <li>PHP</li>
           <li>MySQL</li>
+        </ul>
+        <p>🐙 Source code is available on GitHub:</p>
+        <ul className="list-disc space-y-1 list-inside ml-5">
+          <li>
+            <a
+              href="https://github.com/feriforgacs/hashtagcalendar"
+              target="_blank"
+              rel="noreferrer"
+              className="text-green-500 hover:underline"
+            >
+              HashtagCalendar source code
+            </a>
+          </li>
         </ul>
       </ProjectCard>
     </>

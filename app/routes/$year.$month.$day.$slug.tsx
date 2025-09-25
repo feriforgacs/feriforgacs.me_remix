@@ -36,13 +36,19 @@ export default function BlogPost() {
   return (
     <>
       <title>{title}</title>
-      <article>
+      <article className="mb-10">
         <h1 className="text-3xl my-10 leading-normal">{title}</h1>
         <time dateTime={postDate} className="text-sm text-slate-500 mb-5 block">
           {postDate}
         </time>
-        <img src={image} alt={title} className="rounded-md mb-10" />
-        <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
+        {image ? (
+          <img src={image} alt={title} className="rounded-md mb-10" />
+        ) : null}
+
+        <div
+          className="prose prose-invert"
+          dangerouslySetInnerHTML={{ __html: marked(content) }}
+        />
       </article>
     </>
   );
