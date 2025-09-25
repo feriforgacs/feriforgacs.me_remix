@@ -10,6 +10,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import Footer from "./components/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -42,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </header>
         <main className="max-w-xl mx-auto">{children}</main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>

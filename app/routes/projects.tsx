@@ -4,6 +4,7 @@ import { Link } from "react-router";
 export default function Projects() {
   return (
     <>
+      <title>Projects</title>
       <h1 className="text-3xl mt-10 mb-5">Projects</h1>
       <h2 className="text-xl mb-10">
         Projects I've worked on in the past couple of years

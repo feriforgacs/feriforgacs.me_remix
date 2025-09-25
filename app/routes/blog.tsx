@@ -14,13 +14,16 @@ export default function Blog() {
   const { posts } = useLoaderData<typeof loader>();
 
   return (
-    <div>
-      <h1 className="text-3xl mt-10 mb-10">Posts</h1>
+    <>
+      <title>Posts</title>
       <div>
-        {posts.map((post) => (
-          <PostListItem key={post.slug} post={post} />
-        ))}
+        <h1 className="text-3xl mt-10 mb-10">Posts</h1>
+        <div>
+          {posts.map((post) => (
+            <PostListItem key={post.slug} post={post} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
