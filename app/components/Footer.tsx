@@ -15,11 +15,11 @@ export default function Footer() {
         <p>
           Hosted on{" "}
           <a
-            href="https://vercel.com/"
+            href="https://render.com/"
             target="_blank"
             rel="noreferrer noopener"
           >
-            Vercel
+            Render
           </a>
         </p>
         <p>
